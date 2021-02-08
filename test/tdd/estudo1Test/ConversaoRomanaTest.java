@@ -21,4 +21,24 @@ class ConversaoRomanaTest {
 		int numero = romano.converte("V");
 		assertEquals(5, numero);
 	}
+	@Test
+	public void deveEntenderOSimboloXX() {
+		ConversaoRomana romano = new ConversaoRomana();
+		int numero = romano.converte("XX");
+		assertEquals(20, numero);
+	}
+	@Test
+	public void deveEntenderOSimboloXXX() {
+		ConversaoRomana romano = new ConversaoRomana();
+		int numero = romano.converte("XXX");
+		assertEquals(30, numero);
+	}
+	@Test
+	public void deveEntenderOSimboloXIX() {
+		ConversaoRomana romano = new ConversaoRomana();
+		int numero = romano.converte("XIX");
+		assertEquals(19, numero);
+	}
+	
+	
 }
