@@ -34,10 +34,22 @@ class ConversaoRomanaTest {
 		assertEquals(30, numero);
 	}
 	@Test
+	public void deveEntenderOSimboloXXII() {
+		ConversaoRomana romano = new ConversaoRomana();
+		int numero = romano.converte("XXII");
+		assertEquals(22, numero);
+	}
+	@Test
 	public void deveEntenderOSimboloXIX() {
 		ConversaoRomana romano = new ConversaoRomana();
 		int numero = romano.converte("XIX");
 		assertEquals(19, numero);
+	}
+	@Test
+	public void deveEntenderOSimboloXXIV() {
+		ConversaoRomana romano = new ConversaoRomana();
+		int numero = romano.converte("XXIV");
+		assertEquals(24, numero);
 	}
 	
 	
