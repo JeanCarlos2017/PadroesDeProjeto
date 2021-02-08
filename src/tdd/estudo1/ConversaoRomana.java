@@ -2,6 +2,8 @@ package tdd.estudo1;
 
 public class ConversaoRomana {
 	public int converte(String numero) {
-		return 1;
+		if (numero.equals("I")) return 1;
+		else if(numero.equals("V")) return 5;
+		return 0;
 	}
 }
