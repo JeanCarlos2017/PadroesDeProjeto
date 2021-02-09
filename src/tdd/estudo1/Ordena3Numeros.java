@@ -26,6 +26,11 @@ public class Ordena3Numeros {
 			this.c= troca;
 		}
 		
+		if (this.a > this.b) {
+			troca = this.a;
+			this.a= this.b;
+			this.b= troca;
+		}
 		
 	}
 
