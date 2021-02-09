@@ -10,9 +10,15 @@ public class Ordena3Numeros {
 		this.b = b;
 		this.c = c;
 	}
-
-
+	
+	
 	public void ordena() {
+		int troca;
+		if (this.a > this.b) {
+			troca = this.a;
+			this.a= this.b;
+			this.b= troca;
+		}
 		
 	}
 
@@ -33,5 +39,6 @@ public class Ordena3Numeros {
 	public int getC() {
 		return c;
 	}
+	
 	
 }
