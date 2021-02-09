@@ -24,12 +24,14 @@ class Ordena3NumerosTest {
 		assertEquals(2, ordena.getB());
 		assertEquals(3, ordena.getC());
 	}
-//	@Test
-//	public void ordenaNumerosDecrescentes() {
-//		Ordena3Numeros ordena = new Ordena3Numeros(3, 2, 1);
-//		assertEquals(1, ordena.getA());
-//		assertEquals(2, ordena.getB());
-//		assertEquals(3, ordena.getC());
-//	}
+	@Test
+	public void ordenaNumerosBmaiorQueC() {
+		Ordena3Numeros ordena = new Ordena3Numeros(1,3,2);
+		ordena.ordena();
+		assertEquals(1, ordena.getA());
+		assertEquals(2, ordena.getB());
+		assertEquals(3, ordena.getC());
+	}
+
 
 }
