@@ -16,7 +16,8 @@ public class CalculadoraSalario {
 	
 	public double calculaSalario(Funcionario desenvolvedor) {
 		// TODO Auto-generated method stub
-		return 1350;
+		if(desenvolvedor.getSalario() > 3000) return 3200;
+		else return 1350;
 	}
 	
 }
