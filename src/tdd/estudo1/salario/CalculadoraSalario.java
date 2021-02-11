@@ -8,7 +8,6 @@ public class CalculadoraSalario {
 		• Desenvolvedores possuem 20% de desconto caso seu salário seja maior do que
 		R$ 3000,0. Caso contrário, o desconto é de 10%.
 		32
-		Casa do Código Capítulo 4. Simplicidade e Baby Steps
 		• DBAs e testadores possuem desconto de 25% se seus salários forem maiores
 		do que R$ 2500,0. 15%, em caso contrário.
 
@@ -16,8 +15,17 @@ public class CalculadoraSalario {
 	
 	public double calculaSalario(Funcionario desenvolvedor) {
 		// TODO Auto-generated method stub
-		if(desenvolvedor.getSalario() > 3000) return 3200;
-		else return 1350;
+		//desenvolvedor 
+		if(desenvolvedor.getCargo() == Cargo.DESENVOLVEDOR) {
+			if (desenvolvedor.getSalario() > 3000)	return 3200;
+			else return 1350;
+		}
+		
+		//DBA 
+		if(desenvolvedor.getSalario() < 2500 && desenvolvedor.getCargo() == Cargo.DBA) {
+			return 1275;
+		}
+		return 0;
 	}
 	
 }
