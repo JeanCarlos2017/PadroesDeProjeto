@@ -17,13 +17,13 @@ public class CalculadoraSalario {
 		// TODO Auto-generated method stub
 		//desenvolvedor 
 		if(desenvolvedor.getCargo() == Cargo.DESENVOLVEDOR) {
-			if (desenvolvedor.getSalario() > 3000)	return 3200;
-			else return 1350;
+			if (desenvolvedor.getSalario() > 3000)	return desenvolvedor.getSalario() * 0.8;
+			else return desenvolvedor.getSalario() * 0.9;
 		}
 		
 		//DBA 
-		if(desenvolvedor.getSalario() < 2500 && desenvolvedor.getCargo() == Cargo.DBA) {
-			return 1275;
+		if(desenvolvedor.getCargo() == Cargo.DBA) {
+			if (desenvolvedor.getSalario() < 2500) return desenvolvedor.getSalario() * 0.85;
 		}
 		return 0;
 	}
